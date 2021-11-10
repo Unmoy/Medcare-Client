@@ -1,0 +1,22 @@
+.header_button {
+  background-image: linear-gradient(
+    to right,
+    #02aab0 0%,
+    #00cdac 51%,
+    #02aab0 100%
+  );
+  color: #000;
+  padding: 8px 10px;
+  border: none;
+  transition: 0.5s;
+  background-size: 200% auto;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.header_button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
