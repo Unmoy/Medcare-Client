@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../../DashBoard/SideBar/SideBar";
-import AppointmentDataTable from "../../DashBoard/AppointmentDataTable/AppointmentDataTable";
+import AppointmentDataTable from "./AppointmentDataTable/AppointmentDataTable";
 const AllPatients = () => {
   const [appointments, setAppointments] = useState([]);
 
@@ -18,9 +18,9 @@ const AllPatients = () => {
         <Sidebar></Sidebar>
         <div
           className="col-md-10 p-4 pr-5"
-          style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}
+          style={{ position: "absolute", right: 0 }}
         >
-          <h5 className="text-brand">All Patients</h5>
+          <h2 className="allPatient_container">All Patients</h2>
           <AppointmentDataTable appointments={appointments} />
         </div>
       </div>

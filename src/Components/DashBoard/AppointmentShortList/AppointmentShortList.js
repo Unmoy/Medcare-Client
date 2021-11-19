@@ -1,19 +1,13 @@
 import React from "react";
-
+import "./AppointmentShortList.css";
 const AppointmentShortList = ({ appointments }) => {
   return (
-    <table className="table table-borderless">
+    <table className="styled-table">
       <thead>
         <tr>
-          <th className="text-secondary" scope="col">
-            Name
-          </th>
-          <th className="text-secondary" scope="col">
-            Phone
-          </th>
-          <th className="text-secondary" scope="col">
-            Email
-          </th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
         </tr>
       </thead>
       <tbody>
@@ -21,7 +15,7 @@ const AppointmentShortList = ({ appointments }) => {
           <tr key={index}>
             <td>{appointment.name}</td>
             <td>{appointment.phone}</td>
-            <td>{appointment.email}</td>
+            <td>{appointment.patient_email}</td>
           </tr>
         ))}
       </tbody>

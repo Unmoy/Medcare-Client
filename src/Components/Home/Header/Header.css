@@ -1,16 +1,6 @@
 .header-container {
-  height: 840px;
+  /* height: 840px;
   position: relative;
   background-image: url(../../../images/chairbg.png);
-  background-size: cover;
-}
-.header-container::after {
-  height: 715px;
-  content: " ";
-  position: absolute;
-  top: 0;
-  width: 24%;
-  right: 0;
-  background-color: #3a4256;
-  z-index: -20;
+  background-size: cover; */
 }

@@ -1,24 +1,18 @@
 .appoint-btn {
-  background-image: linear-gradient(
-    to right,
-    #02aab0 0%,
-    #00cdac 51%,
-    #02aab0 100%
-  );
-  margin: 10px;
-  padding: 8px 20%;
+  background-color: #09e5ab;
+  margin: 20px;
+  padding: 8px 18%;
   text-align: center;
   text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
   color: black;
-  border: 1px solid white;
-  display: block;
-  border-radius: 0;
+  border-radius: 4px;
+  border: none;
 }
 
 .appoint-btn:hover {
-  background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+}
+.appointment_form_box {
+  font-family: "Poppins";
 }

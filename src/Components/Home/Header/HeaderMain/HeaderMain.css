@@ -1,22 +1,43 @@
-.header_button {
-  background-image: linear-gradient(
-    to right,
-    #02aab0 0%,
-    #00cdac 51%,
-    #02aab0 100%
-  );
-  color: #000;
-  padding: 8px 10px;
-  border: none;
-  transition: 0.5s;
-  background-size: 200% auto;
-  text-transform: uppercase;
-  font-weight: 500;
-  border-radius: 3px;
+.header_section {
+  background: #f9f9f9 url("../../../../images//header_bd.png") no-repeat bottom
+    center;
+  min-height: 450px;
+  background-size: 100% auto;
+  position: relative;
+  background-blend-mode: Darken;
+  padding: 80px 0;
 }
-
-.header_button:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
+.banner_text {
+  font-family: "Poppins", sans-serif;
+}
+.banner_text h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.banner_text p {
+  color: #757575;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.banner_text button {
+  margin-top: 30px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  font-weight: 500;
+  padding: 13px 30px 12px 30px;
+  border-radius: 50px;
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+}
+.banner_text button:hover {
+  opacity: 0.9;
+}
+.route_links {
   text-decoration: none;
+  color: #000;
+}
+.route_links:hover {
+  color: #000;
 }

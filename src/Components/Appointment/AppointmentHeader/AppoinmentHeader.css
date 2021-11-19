@@ -1,0 +1,33 @@
+.appointment_img img {
+  width: 79%;
+}
+.appointment_header_title {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.appointment_header_title img {
+  max-width: 100%;
+}
+.appointment_header_title h1 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 46px;
+  color: #fff;
+  position: absolute;
+  top: 41%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+}
+.calender .react-calendar {
+  box-shadow: rgba(7, 152, 255, 0.22) 0px 10px 10px;
+  border: none;
+  width: 100%;
+  font-family: "Poppins";
+}
+
+.calender .react-calendar__navigation {
+  background-color: #09e5ab;
+  color: #000;
+}

@@ -1,3 +1,7 @@
+.booking_card_wrapper {
+  font-family: "Poppins";
+}
+
 .btn-grad {
   background-image: linear-gradient(
     to right,
@@ -7,17 +11,15 @@
   );
 }
 .btn-grad {
-  margin: 10px;
-  margin-left: 124px;
+  margin: 0 auto;
   padding: 8px 8px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: black;
-  border: 1px solid white;
-  display: block;
-  border-radius: 0;
+  border: none;
+  border-radius: 4px;
 }
 
 .btn-grad:hover {

@@ -1,14 +1,12 @@
-.testimonials .container {
+.test_wrapper {
   background-image: url(../../../images/quote.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 150px;
+  margin: 50px;
+  width: 70%;
+  margin: 50px auto;
+  font-family: "Poppins";
 }
-.testimonials .card {
-  border-color: transparent;
-}
-
-.testimonials .card .card-footer {
-  background: transparent;
-  border: 0;
+.section-header {
 }

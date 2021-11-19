@@ -1,3 +1,13 @@
 .text-color {
   color: #1cc7c1;
 }
+.booking_list_section h1 {
+  color: #09e5ab;
+  font-family: "Poppins";
+  font-weight: 500;
+  text-align: center;
+}
+.booking_list_section span {
+  /* color: #0e78a0; */
+  color: red;
+}

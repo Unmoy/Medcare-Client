@@ -7,15 +7,20 @@ import {
   signInWithPopup,
   updateProfile,
 } from "firebase/auth";
-// import 'firebase/compat/auth';
+
 const AuthContext = createContext();
 
 export function useAuth() {
   return useContext(AuthContext);
 }
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState();
+  const [currentUser, setCurrentUser] = useState({
+    user_name: "",
+    user_email: "",
+  });
+  console.log(currentUser);
   const [loading, setLoading] = useState(true);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
   const provider = new GoogleAuthProvider();
   const auth = getAuth();
 
@@ -32,10 +37,8 @@ export const AuthProvider = ({ children }) => {
     return authentication
       .signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
-        localStorage.setItem(
-          "token",
-          userCredential.user._delegate.accessToken
-        );
+        // localStorage.setItem("token", userCredential.user.accessToken);
+        console.log(userCredential);
       });
   }
 
@@ -46,15 +49,28 @@ export const AuthProvider = ({ children }) => {
   function logout() {
     return auth.signOut();
   }
+
   useEffect(() => {
     const unsubscribe = authentication.onAuthStateChanged((user) => {
-      setCurrentUser(user);
+      if (user) {
+        setCurrentUser({
+          user_name: user._delegate.displayName,
+          user_email: user._delegate.email,
+        });
+        localStorage.setItem("token", user._delegate.accessToken);
+      }
       setLoading(false);
     });
     return unsubscribe;
   }, []);
 
-  const value = { currentUser, signUp, login, signInWithGoogle, logout };
+  const value = {
+    currentUser,
+    signUp,
+    login,
+    signInWithGoogle,
+    logout,
+  };
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}

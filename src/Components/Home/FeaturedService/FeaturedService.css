@@ -1,0 +1,21 @@
+.features-service {
+  padding: 50px;
+}
+.features_info h1 {
+  font-family: "Poppins";
+}
+.features_info p {
+  font-family: "Poppins";
+}
+.features_button {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #09e5ab;
+  border-radius: 4px;
+  padding: 10px 15px !important;
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: #09e5ab;
+}

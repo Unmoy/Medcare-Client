@@ -13,13 +13,6 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (token) {
-      history.push("/dashboard");
-    }
-  }, [history]);
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -41,12 +34,19 @@ const Signup = () => {
   };
   const handlegoogle = async () => {
     setLoading(true);
-    await signInWithGoogle();
-    history.push("/");
+    try {
+      setError("");
+      setLoading(true);
+      await signInWithGoogle();
+      history.push("/dashboard");
+    } catch {
+      setError("Failed to create an account");
+    }
+    setLoading(false);
   };
   return (
     <div>
-      <Card className="w-50 mx-auto mt-5">
+      <Card className="w-50 mx-auto mt-5 page_font">
         <Card.Body>
           <h2 className="text-center mb-4">Create an account</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -67,16 +67,19 @@ const Signup = () => {
               <Form.Label>Password Confirmation</Form.Label>
               <Form.Control type="password" ref={passwordConfirmRef} required />
             </Form.Group>
-            <Button className="w-100 mt-3 btn-warning" type="submit">
+            <button className="w-100 mt-3 features_button" type="submit">
               {loading ? "Creating user.." : "Register"}
-            </Button>
+            </button>
           </Form>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Already have an account? <Link to="/login">Log In</Link>
+        Already have an account?{" "}
+        <Link to="/login" className="page_font">
+          Log In
+        </Link>
         <br />
-        <button className="mt-3 btn-warning p-1 px-5" onClick={handlegoogle}>
+        <button className="signup_google" onClick={handlegoogle}>
           SignUp with Google
         </button>
       </div>

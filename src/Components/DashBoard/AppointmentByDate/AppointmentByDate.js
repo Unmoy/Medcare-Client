@@ -12,7 +12,7 @@ const AppointmentsByDate = ({ appointments }) => {
         ></AppointmentShortList>
       ) : (
         <div className="p-5">
-          <h4 className="lead text-center">No Appointments for this Date</h4>
+          <h4 className="lead text-center">No Appointments on this Date</h4>
         </div>
       )}
     </div>

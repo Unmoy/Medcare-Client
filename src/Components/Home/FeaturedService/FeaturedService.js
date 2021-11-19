@@ -1,5 +1,6 @@
 import React from "react";
-import featured from "../../../images/featured.png";
+import featured from "../../../images/featured.jpg";
+import "./FeaturedService.css";
 const FeaturedService = () => {
   return (
     <section className="features-service pb-0 pb-md-5 my-5">
@@ -8,9 +9,9 @@ const FeaturedService = () => {
           <div className="col-md-5 mb-4 m-md-0">
             <img className="img-fluid" src={featured} alt="" />
           </div>
-          <div className="col-md-7 align-self-center">
-            <h1>Exceptional Dental Care, on your Term</h1>
-            <p className="text-secondary my-5">
+          <div className="col-md-7 align-self-center features_info">
+            <h2>Exceptional Dental Care, on your Term</h2>
+            <p className="text-secondary my-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
               efacere amet aperiam non odio. Temporibus, nemo quasi quisquam
               ipsa distinctio saepe sed veniam incidunt, tempora mollitia,
@@ -21,7 +22,7 @@ const FeaturedService = () => {
               nemo nam, delectus minima velit beatae iste praesentium ad
               repudiandae, similique excepturi sapiente.
             </p>
-            <button className="btn btn-primary">Learn More</button>
+            <button className="features_button">Learn More</button>
           </div>
         </div>
       </div>

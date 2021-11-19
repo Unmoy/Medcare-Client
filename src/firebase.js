@@ -1,13 +1,13 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-
+// import { initializeApp } from "firebase/app";
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyCFQnNTnsX6bVD7FqUv6YT4vbk37G2_XmQ",
-  authDomain: "authentication-practice-8c7fd.firebaseapp.com",
-  projectId: "authentication-practice-8c7fd",
-  storageBucket: "authentication-practice-8c7fd.appspot.com",
-  messagingSenderId: "105618301645",
-  appId: "1:105618301645:web:332a5c6ee77f1463fa7f84",
+  apiKey: "AIzaSyDoPZw7TYLlb4bafj9E07VBXtGhKYWyfZ4",
+  authDomain: "medcare-portal.firebaseapp.com",
+  projectId: "medcare-portal",
+  storageBucket: "medcare-portal.appspot.com",
+  messagingSenderId: "901277649862",
+  appId: "1:901277649862:web:2158f53bc5760cc8ff40c7",
 });
 
 export const authentication = app.auth();

@@ -18,7 +18,7 @@ const MakeAppointment = () => {
             <p className="text-dark fw-bold">
               Contact us for an early appointment with your favourite doctor.
             </p>
-            <button className="btn btn-primary">Learn More</button>
+            <button className="features_button">Book Appoinment</button>
           </div>
         </div>
       </div>

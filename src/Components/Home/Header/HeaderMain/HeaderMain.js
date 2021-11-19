@@ -1,21 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Chair from "../../../../images/chair.png";
 import "./HeaderMain.css";
 
 const HeaderMain = () => {
   return (
-    <main style={{ height: "600px" }} className="row d-flex align-items-center">
-      <div className="col-md-4 offset-md-1">
-        <h2 style={{ color: "#203047" }}>Your Health Matters</h2>
-        <h4 style={{ color: "#203047" }}>So Are your Choices </h4>
-        <p style={{ color: "#203047" }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum
-          fuga, soluta voluptatem molestiae ducimus?
-        </p>
-        <button className="header_button">Get Appointment</button>
-      </div>
-      <div className="col-md-6">
-        <img src={Chair} alt="" className="img-fluid" />
+    <main className="header_section">
+      <div className="container_fluid">
+        <div className="banner_wrapper">
+          <div className="banner_text text-center">
+            <h1>Search Doctor, Make an Appointment</h1>
+            <p>
+              Discover the best doctors, clinic & hospital the city nearest to
+              you.
+            </p>
+            <button>
+              <Link to="/appointment" className="route_links">
+                Book an Appointment
+              </Link>
+            </button>
+          </div>
+        </div>
       </div>
     </main>
   );

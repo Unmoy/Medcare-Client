@@ -8,7 +8,7 @@ const Header = () => {
     <div className="header-container">
       <Navbar></Navbar>
       <HeaderMain></HeaderMain>
-      <BusinessInfo></BusinessInfo>
+      {/* <BusinessInfo></BusinessInfo> */}
     </div>
   );
 };

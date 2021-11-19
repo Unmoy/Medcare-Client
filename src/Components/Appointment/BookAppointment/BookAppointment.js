@@ -49,11 +49,11 @@ const bookingData = [
 
 const BookAppointment = ({ selectedDate }) => {
   return (
-    <section>
-      <h1 className="text-center text-color">
-        Available Appointment on{selectedDate.toDateString()}
+    <section className="booking_list_section">
+      <h1>
+        Available Appointments on <span>{selectedDate.toDateString()}</span>
       </h1>
-      <div className="row">
+      <div className="row w-75 m-auto">
         {bookingData.map((booking) => (
           <BookingCard
             key={booking.id}

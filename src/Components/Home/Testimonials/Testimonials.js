@@ -10,42 +10,44 @@ const testimonialData = [
     quote:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
     name: "Wilson Harry",
-    from: "California",
+    from: "Washington",
     img: wilson,
   },
   {
     quote:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
     name: "Ema Gomez",
-    from: "California",
+    from: "Los Angelos",
     img: ema,
   },
   {
     quote:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
     name: "Aliza Farari",
-    from: "California",
+    from: "Newyork",
     img: aliza,
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="testimonials my-5 py-5">
-      <div className="container">
+    <div className="test_wrapper" id="reviews">
+      <div>
         <div className="section-header">
           <h5 className="text-primary text-uppercase">Testimonial</h5>
           <h1>
-            What Our Patients <br /> Says{" "}
+            What Our Patients <br /> Says
           </h1>
         </div>
-        <div className="card-deck mt-5">
-          {testimonialData.map((testimonial) => (
-            <Testimonial testimonial={testimonial} key={testimonial.name} />
-          ))}
+        <div className="d-flex justify-content-center">
+          <div className="row mt-5">
+            {testimonialData.map((testimonial) => (
+              <Testimonial testimonial={testimonial} key={testimonial.name} />
+            ))}
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
