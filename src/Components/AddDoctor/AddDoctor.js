@@ -29,13 +29,13 @@ const AddDoctor = () => {
       imageUrl: image,
     };
     console.log("30", newDoctor);
-    fetch("http://localhost:5000/adddoctor", {
+    fetch("https://nameless-ocean-19035.herokuapp.com/adddoctor", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newDoctor),
     }).then((success) => {
       if (success) {
-        alert("success");
+        alert("Doctor Added Succesfully");
       }
     });
     e.preventDefault();

@@ -25,7 +25,7 @@ const AppointmentForm = ({ closeModal, modalIsOpen, subject, date }) => {
     data.appointmentOn = date.toDateString();
     data.generated = new Date();
     data.patient_email = currentUser.user_email;
-    fetch("http://localhost:5000/addappointment", {
+    fetch("https://nameless-ocean-19035.herokuapp.com/addappointment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

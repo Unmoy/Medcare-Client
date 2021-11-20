@@ -26,7 +26,7 @@ const SideBar = () => {
     }
   };
   useEffect(() => {
-    fetch("http://localhost:5000/isDoctor", {
+    fetch("https://nameless-ocean-19035.herokuapp.com/isDoctor", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: currentUser.user_email }),
